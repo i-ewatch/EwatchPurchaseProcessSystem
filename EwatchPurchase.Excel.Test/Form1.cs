@@ -68,30 +68,110 @@ namespace EwatchPurchase.Excel.Test
                                 for (int Rownum = 9; Rownum < data.LastRowNum; Rownum++)//每一行資料
                                 {
                                     IRow row = data.GetRow(Rownum);
-                                    cell1.Add(row.GetCell(0));
-                                    cell2.Add(row.GetCell(1));
-                                    cell3.Add(row.GetCell(2));
-                                    cell4.Add(row.GetCell(3));
-                                    if (row.GetCell(4).CellType == CellType.Formula)
+                                    if (row.GetCell(0).ToString() == "以下空白")
                                     {
-                                        row.GetCell(4).SetCellType(CellType.String);
-                                        cell5.Add(row.GetCell(4));
+                                        cell1.Add(row.GetCell(0));
+                                        break;
                                     }
                                     else
                                     {
-                                        cell5.Add(row.GetCell(4));
+                                        cell1.Add(row.GetCell(0));
                                     }
-                                    if (row.GetCell(5).CellType == CellType.Formula)
+                                    if (row.GetCell(1).ToString() == "以下空白")
                                     {
-                                        row.GetCell(5).SetCellType(CellType.String);
-                                        cell6.Add(row.GetCell(5));
+                                        cell2.Add(row.GetCell(1));
+                                        break;
                                     }
                                     else
                                     {
-                                        cell6.Add(row.GetCell(5));
+                                        cell2.Add(row.GetCell(1));
                                     }
-                                    cell7.Add(row.GetCell(6));
-                                    cell8.Add(row.GetCell(7));
+                                    if (row.GetCell(2).ToString() == "以下空白")
+                                    {
+                                        cell3.Add(row.GetCell(2));
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        cell3.Add(row.GetCell(2));
+                                    }
+                                    if (row.GetCell(3).ToString() == "以下空白")
+                                    {
+                                        cell4.Add(row.GetCell(3));
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        cell4.Add(row.GetCell(3));
+                                    }
+                                    if (row.GetCell(4).ToString() == "以下空白")
+                                    {
+                                        if (row.GetCell(4).CellType == CellType.Formula)
+                                        {
+                                            row.GetCell(4).SetCellType(CellType.String);
+                                            cell5.Add(row.GetCell(4));
+                                        }
+                                        else
+                                        {
+                                            cell5.Add(row.GetCell(4));
+                                        }
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        if (row.GetCell(4).CellType == CellType.Formula)
+                                        {
+                                            row.GetCell(4).SetCellType(CellType.String);
+                                            cell5.Add(row.GetCell(4));
+                                        }
+                                        else
+                                        {
+                                            cell5.Add(row.GetCell(4));
+                                        }
+                                    }
+                                    if (row.GetCell(5).ToString() == "以下空白")
+                                    {
+                                        if (row.GetCell(5).CellType == CellType.Formula)
+                                        {
+                                            row.GetCell(5).SetCellType(CellType.String);
+                                            cell6.Add(row.GetCell(5));
+                                        }
+                                        else
+                                        {
+                                            cell6.Add(row.GetCell(5));
+                                        }
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        if (row.GetCell(5).CellType == CellType.Formula)
+                                        {
+                                            row.GetCell(5).SetCellType(CellType.String);
+                                            cell6.Add(row.GetCell(5));
+                                        }
+                                        else
+                                        {
+                                            cell6.Add(row.GetCell(5));
+                                        }
+                                    }
+                                    if (row.GetCell(6).ToString() == "以下空白")
+                                    {
+                                        cell7.Add(row.GetCell(6));
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        cell7.Add(row.GetCell(6));
+                                    }
+                                    if (row.GetCell(7).ToString() == "以下空白")
+                                    {
+                                        cell8.Add(row.GetCell(7));
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        cell8.Add(row.GetCell(7));
+                                    }
                                 }
                             }
                         }
@@ -101,6 +181,7 @@ namespace EwatchPurchase.Excel.Test
                 catch (FileNotFoundException ex) { Log.Error(ex, $"KWH查無此資料檔案"); }
                 catch (Exception ex) { Log.Error(ex, $"KWH資料匯入失敗  檔案名稱{FieldName}"); }
             }
+            filenamelabel.Text = ReportPath.Split('.')[0].Split('\\')[ReportPath.Split('.')[0].Split('\\').Length - 1];
             dataGridView1.ColumnCount = 8;
             dataGridView1.Columns[0].Name = Convert.ToString(cell1[0]);
             dataGridView1.Columns[1].Name = Convert.ToString(cell2[0]);

@@ -32,12 +32,16 @@ namespace EwatchPurchase.Excel.Test
             this.panel1 = new System.Windows.Forms.Panel();
             this.Importbutton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.filenamelabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.filenamelabel);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.Importbutton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -67,6 +71,26 @@ namespace EwatchPurchase.Excel.Test
             this.dataGridView1.Size = new System.Drawing.Size(918, 400);
             this.dataGridView1.TabIndex = 1;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("標楷體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label1.Location = new System.Drawing.Point(7, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(119, 16);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "開啟檔案名稱:";
+            // 
+            // filenamelabel
+            // 
+            this.filenamelabel.AutoSize = true;
+            this.filenamelabel.Font = new System.Drawing.Font("標楷體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.filenamelabel.Location = new System.Drawing.Point(127, 16);
+            this.filenamelabel.Name = "filenamelabel";
+            this.filenamelabel.Size = new System.Drawing.Size(25, 16);
+            this.filenamelabel.TabIndex = 2;
+            this.filenamelabel.Text = "無";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -77,6 +101,7 @@ namespace EwatchPurchase.Excel.Test
             this.Name = "Form1";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -87,6 +112,8 @@ namespace EwatchPurchase.Excel.Test
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button Importbutton;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label filenamelabel;
+        private System.Windows.Forms.Label label1;
     }
 }
 

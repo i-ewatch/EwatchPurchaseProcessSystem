@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EwatchPurchase.Excel.Test", "EwatchPurchase.Excel.Test\EwatchPurchase.Excel.Test.csproj", "{7B0E26A0-604E-4336-9EB1-BE302C64BE16}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EwatchPurchase.SQL.Test", "EwatchPurchase.SQL.Test\EwatchPurchase.SQL.Test.csproj", "{4BC7E6BF-C462-4C75-93F0-274010C5E15D}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "PurchaseProcessSystemDB", "PurchaseProcessSystemDB\PurchaseProcessSystemDB.sqlproj", "{23050DB0-0CAD-4A86-9A18-57A84316BF14}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,16 @@ Global
 		{7B0E26A0-604E-4336-9EB1-BE302C64BE16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B0E26A0-604E-4336-9EB1-BE302C64BE16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B0E26A0-604E-4336-9EB1-BE302C64BE16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BC7E6BF-C462-4C75-93F0-274010C5E15D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BC7E6BF-C462-4C75-93F0-274010C5E15D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BC7E6BF-C462-4C75-93F0-274010C5E15D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BC7E6BF-C462-4C75-93F0-274010C5E15D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23050DB0-0CAD-4A86-9A18-57A84316BF14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23050DB0-0CAD-4A86-9A18-57A84316BF14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23050DB0-0CAD-4A86-9A18-57A84316BF14}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{23050DB0-0CAD-4A86-9A18-57A84316BF14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23050DB0-0CAD-4A86-9A18-57A84316BF14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23050DB0-0CAD-4A86-9A18-57A84316BF14}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

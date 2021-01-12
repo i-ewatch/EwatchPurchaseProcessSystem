@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace EwatchPurchase.Excel.Test
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         /// <summary>
         /// 檔案瀏覽
@@ -44,7 +44,7 @@ namespace EwatchPurchase.Excel.Test
         public List<ICell> cell6 = new List<ICell>();
         public List<ICell> cell7 = new List<ICell>();
         public List<ICell> cell8 = new List<ICell>();
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }

@@ -88,6 +88,7 @@
   <ItemGroup>
     <Compile Include="Configuration\SQLSetting.cs" />
     <Compile Include="EF_Model\PurchaseProcessSystemDBModel\Costofferform.cs" />
+    <Compile Include="EF_Model\PurchaseProcessSystemDBModel\EncodeRules.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

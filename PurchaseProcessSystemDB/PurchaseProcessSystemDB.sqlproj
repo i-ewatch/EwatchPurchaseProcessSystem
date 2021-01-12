@@ -62,7 +62,7 @@
     <Folder Include="dbo\Tables\" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="dbo\Tables\Costofferform_2.sql" />
+    <Build Include="dbo\Tables\Costofferform.sql" />
     <Build Include="dbo\Tables\EncodeRules.sql" />
   </ItemGroup>
 </Project>

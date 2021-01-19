@@ -220,7 +220,7 @@ namespace EwatchPurchase.SQL.Test
                 }
                 else
                 {
-                    j = SQLMethod.Count_Costofferform().Select(g => g.pk).Count();
+                    j = SQLMethod.Count_Costofferform().Select(g => g.pk).Count() +1;
                     string NO = textEdit1.Text;
                     for (int i = 1; i < cell1.Count; i++)
                     {

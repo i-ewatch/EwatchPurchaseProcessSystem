@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EwatchPurchase.Output.Test.EF_Model.PurchaseProcessSystemDBModel
+namespace EwatchPurchase.Form.Test.EF_Model.PurchaseProcessSystemDBModel
 {
     public partial class EncodeRule
     {

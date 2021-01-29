@@ -100,19 +100,17 @@ namespace EwatchPurchase.Form.Test.FQ
             this.xrLabel21 = new DevExpress.XtraReports.UI.XRLabel();
             this.RemarkxrCheckBox = new DevExpress.XtraReports.UI.XRCheckBox();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
-            this.DataxrCrossTab = new DevExpress.XtraReports.UI.XRCrossTab();
-            this.crossTabHeaderCell1 = new DevExpress.XtraReports.UI.CrossTab.XRCrossTabCell();
-            this.crossTabDataCell1 = new DevExpress.XtraReports.UI.CrossTab.XRCrossTabCell();
-            this.crossTabHeaderCell2 = new DevExpress.XtraReports.UI.CrossTab.XRCrossTabCell();
-            this.crossTabHeaderCell3 = new DevExpress.XtraReports.UI.CrossTab.XRCrossTabCell();
-            this.crossTabGeneralStyle1 = new DevExpress.XtraReports.UI.XRControlStyle();
-            this.crossTabHeaderStyle1 = new DevExpress.XtraReports.UI.XRControlStyle();
-            this.crossTabDataStyle1 = new DevExpress.XtraReports.UI.XRControlStyle();
-            this.crossTabTotalStyle1 = new DevExpress.XtraReports.UI.XRControlStyle();
+            this.GroupHeader1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
+            this.xrTable4 = new DevExpress.XtraReports.UI.XRTable();
+            this.xrTableRow8 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.xrTableCell6 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell8 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell9 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell10 = new DevExpress.XtraReports.UI.XRTableCell();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DataxrCrossTab)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // TopMargin
@@ -369,7 +367,7 @@ namespace EwatchPurchase.Form.Test.FQ
             this.xrLabel10.StylePriority.UseBorderDashStyle = false;
             this.xrLabel10.StylePriority.UseBorderWidth = false;
             this.xrLabel10.StylePriority.UseFont = false;
-            this.xrLabel10.Text = "一、一般說明:";
+            this.xrLabel10.Text = "無";
             // 
             // xrLabel9
             // 
@@ -886,106 +884,87 @@ namespace EwatchPurchase.Form.Test.FQ
             // 
             // Detail
             // 
-            this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.DataxrCrossTab});
             this.Detail.HeightF = 546.875F;
             this.Detail.MultiColumn.Mode = DevExpress.XtraReports.UI.MultiColumnMode.UseColumnCount;
             this.Detail.Name = "Detail";
             // 
-            // DataxrCrossTab
+            // GroupHeader1
             // 
-            this.DataxrCrossTab.Cells.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.crossTabHeaderCell1,
-            this.crossTabDataCell1,
-            this.crossTabHeaderCell2,
-            this.crossTabHeaderCell3});
-            this.DataxrCrossTab.ColumnDefinitions.AddRange(new DevExpress.XtraReports.UI.CrossTab.CrossTabColumnDefinition[] {
-            new DevExpress.XtraReports.UI.CrossTab.CrossTabColumnDefinition(388.5F),
-            new DevExpress.XtraReports.UI.CrossTab.CrossTabColumnDefinition(388.5F)});
-            this.DataxrCrossTab.DataAreaStyleName = "crossTabDataStyle1";
-            this.DataxrCrossTab.GeneralStyleName = "crossTabGeneralStyle1";
-            this.DataxrCrossTab.HeaderAreaStyleName = "crossTabHeaderStyle1";
-            this.DataxrCrossTab.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.DataxrCrossTab.Name = "DataxrCrossTab";
-            this.DataxrCrossTab.RowDefinitions.AddRange(new DevExpress.XtraReports.UI.CrossTab.CrossTabRowDefinition[] {
-            new DevExpress.XtraReports.UI.CrossTab.CrossTabRowDefinition(59.89585F),
-            new DevExpress.XtraReports.UI.CrossTab.CrossTabRowDefinition(59.89585F)});
-            this.DataxrCrossTab.SizeF = new System.Drawing.SizeF(777F, 119.7917F);
-            this.DataxrCrossTab.TotalAreaStyleName = "crossTabTotalStyle1";
+            this.GroupHeader1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrTable4});
+            this.GroupHeader1.HeightF = 37.70835F;
+            this.GroupHeader1.Name = "GroupHeader1";
             // 
-            // crossTabHeaderCell1
+            // xrTable4
             // 
-            this.crossTabHeaderCell1.ColumnIndex = 0;
-            this.crossTabHeaderCell1.Name = "crossTabHeaderCell1";
-            this.crossTabHeaderCell1.RowIndex = 0;
-            // 
-            // crossTabDataCell1
-            // 
-            this.crossTabDataCell1.ColumnIndex = 1;
-            this.crossTabDataCell1.Name = "crossTabDataCell1";
-            this.crossTabDataCell1.RowIndex = 1;
-            // 
-            // crossTabHeaderCell2
-            // 
-            this.crossTabHeaderCell2.ColumnIndex = 1;
-            this.crossTabHeaderCell2.Name = "crossTabHeaderCell2";
-            this.crossTabHeaderCell2.RowIndex = 0;
-            // 
-            // crossTabHeaderCell3
-            // 
-            this.crossTabHeaderCell3.ColumnIndex = 0;
-            this.crossTabHeaderCell3.Name = "crossTabHeaderCell3";
-            this.crossTabHeaderCell3.RowIndex = 1;
-            // 
-            // crossTabGeneralStyle1
-            // 
-            this.crossTabGeneralStyle1.BackColor = System.Drawing.Color.White;
-            this.crossTabGeneralStyle1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.crossTabGeneralStyle1.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            this.xrTable4.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.crossTabGeneralStyle1.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.crossTabGeneralStyle1.ForeColor = System.Drawing.Color.Black;
-            this.crossTabGeneralStyle1.Name = "crossTabGeneralStyle1";
-            this.crossTabGeneralStyle1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrTable4.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrTable4.Name = "xrTable4";
+            this.xrTable4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrTable4.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
+            this.xrTableRow8});
+            this.xrTable4.SizeF = new System.Drawing.SizeF(777.0001F, 37.70835F);
+            this.xrTable4.StylePriority.UseBorders = false;
+            this.xrTable4.StylePriority.UseTextAlignment = false;
+            this.xrTable4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
-            // crossTabHeaderStyle1
+            // xrTableRow8
             // 
-            this.crossTabHeaderStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.crossTabHeaderStyle1.Name = "crossTabHeaderStyle1";
-            this.crossTabHeaderStyle1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.xrTableRow8.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.xrTableCell6,
+            this.xrTableCell8,
+            this.xrTableCell9,
+            this.xrTableCell10});
+            this.xrTableRow8.Name = "xrTableRow8";
+            this.xrTableRow8.Weight = 1D;
             // 
-            // crossTabDataStyle1
+            // xrTableCell6
             // 
-            this.crossTabDataStyle1.Name = "crossTabDataStyle1";
-            this.crossTabDataStyle1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.xrTableCell6.Multiline = true;
+            this.xrTableCell6.Name = "xrTableCell6";
+            this.xrTableCell6.Text = "名稱";
+            this.xrTableCell6.Weight = 1D;
             // 
-            // crossTabTotalStyle1
+            // xrTableCell8
             // 
-            this.crossTabTotalStyle1.Name = "crossTabTotalStyle1";
-            this.crossTabTotalStyle1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.xrTableCell8.Multiline = true;
+            this.xrTableCell8.Name = "xrTableCell8";
+            this.xrTableCell8.Text = "單位";
+            this.xrTableCell8.Weight = 1D;
+            // 
+            // xrTableCell9
+            // 
+            this.xrTableCell9.Multiline = true;
+            this.xrTableCell9.Name = "xrTableCell9";
+            this.xrTableCell9.Text = "數量";
+            this.xrTableCell9.Weight = 1D;
+            // 
+            // xrTableCell10
+            // 
+            this.xrTableCell10.Multiline = true;
+            this.xrTableCell10.Name = "xrTableCell10";
+            this.xrTableCell10.Text = "備註";
+            this.xrTableCell10.Weight = 1D;
             // 
             // ReportFQ
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
             this.TopMargin,
             this.BottomMargin,
-            this.Detail});
+            this.Detail,
+            this.GroupHeader1});
             this.Font = new System.Drawing.Font("微軟正黑體", 9F);
             this.Margins = new System.Drawing.Printing.Margins(25, 25, 385, 153);
             this.PageHeight = 1169;
             this.PageWidth = 827;
             this.PaperKind = System.Drawing.Printing.PaperKind.A4;
-            this.StyleSheet.AddRange(new DevExpress.XtraReports.UI.XRControlStyle[] {
-            this.crossTabGeneralStyle1,
-            this.crossTabHeaderStyle1,
-            this.crossTabDataStyle1,
-            this.crossTabTotalStyle1});
             this.Version = "19.2";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DataxrCrossTab)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -1063,14 +1042,12 @@ namespace EwatchPurchase.Form.Test.FQ
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell26;
         private DevExpress.XtraReports.UI.XRLabel xrLabel21;
         private DevExpress.XtraReports.UI.XRCheckBox RemarkxrCheckBox;
-        private DevExpress.XtraReports.UI.XRCrossTab DataxrCrossTab;
-        private DevExpress.XtraReports.UI.CrossTab.XRCrossTabCell crossTabHeaderCell1;
-        private DevExpress.XtraReports.UI.CrossTab.XRCrossTabCell crossTabDataCell1;
-        private DevExpress.XtraReports.UI.CrossTab.XRCrossTabCell crossTabHeaderCell2;
-        private DevExpress.XtraReports.UI.CrossTab.XRCrossTabCell crossTabHeaderCell3;
-        private DevExpress.XtraReports.UI.XRControlStyle crossTabGeneralStyle1;
-        private DevExpress.XtraReports.UI.XRControlStyle crossTabHeaderStyle1;
-        private DevExpress.XtraReports.UI.XRControlStyle crossTabDataStyle1;
-        private DevExpress.XtraReports.UI.XRControlStyle crossTabTotalStyle1;
+        private DevExpress.XtraReports.UI.GroupHeaderBand GroupHeader1;
+        private DevExpress.XtraReports.UI.XRTable xrTable4;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow8;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell6;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell8;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell9;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell10;
     }
 }

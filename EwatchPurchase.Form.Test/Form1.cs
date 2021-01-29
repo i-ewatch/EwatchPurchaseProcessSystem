@@ -1,4 +1,6 @@
-﻿using EwatchPurchase.Form.Test.FQ;
+﻿using EwatchPurchase.Form.Test.Configuration;
+using EwatchPurchase.Form.Test.FQ;
+using EwatchPurchase.Form.Test.Method;
 using Serilog;
 using System;
 using System.Collections.Generic;
@@ -13,6 +15,14 @@ namespace EwatchPurchase.Form.Test
 {
     public partial class Form1 : DevExpress.XtraEditors.XtraForm
     {
+        /// <summary>
+        /// 資料庫
+        /// </summary>
+        private SQLSetting SQLSettings { get; set; }
+        /// <summary>
+        /// SQL解析
+        /// </summary>
+        private SQLMethod SQLMethod;
         public Form1()
         {
             InitializeComponent();
@@ -22,10 +32,10 @@ namespace EwatchPurchase.Form.Test
             rollingInterval: RollingInterval.Day,
             outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}")
             .CreateLogger();
-        }
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
+            SQLSettings = InitialMethod.InitialSQLSetting();
+            SQLMethod = new SQLMethod() { setting = SQLSettings };
+            SQLMethod.SQLConnect();
         }
         private void ReviewsimpleButton_Click(object sender, EventArgs e)
         {
@@ -46,6 +56,11 @@ namespace EwatchPurchase.Form.Test
             bool constructioncheck = false;
             bool hangcheck = false;
             bool elsecheck = false;
+            bool inagreement = false;
+            bool noagreement = false;
+            bool just = false;
+            bool suggest = false;
+            bool remark = checkEdit1.Checked;
             switch (comboBoxEdit1.SelectedIndex)
             {
                 case 0:
@@ -74,7 +89,31 @@ namespace EwatchPurchase.Form.Test
                     }
                     break;
             }
-            reportFQ.Textchange(projectno, buyno, projectpurchaseer, branch, project, appdate, buylimitdate, needdate, pickup, deliery, devicecheck, materialcheck, constructioncheck, hangcheck, elsecheck);
+            switch (comboBoxEdit2.SelectedIndex)
+            {
+                case 0:
+                    {
+                        inagreement = true;
+                    }
+                    break;
+                case 1:
+                    {
+                        noagreement = true;
+                    }
+                    break;
+                case 2:
+                    {
+                        just = true;
+                    }
+                    break;
+                case 3:
+                    {
+                        suggest = true;
+                    }
+                    break;
+            }
+            reportFQ.Textchange(projectno, buyno, projectpurchaseer, branch, project, appdate, buylimitdate, needdate, pickup, deliery, devicecheck, materialcheck, constructioncheck, hangcheck, elsecheck, inagreement, noagreement, just, suggest, remark);
+            reportFQ.DataxrCrossTabChange();
             reportFQ.CreateDocument();
             documentViewer1.DocumentSource = reportFQ;
         }
